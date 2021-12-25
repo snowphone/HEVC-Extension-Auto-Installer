@@ -2,4 +2,6 @@ $action = New-ScheduledTaskAction -Execute powershell -Argument ' -c Add-AppxPac
 $trigger = New-ScheduledTaskTrigger -AtStartup
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries
 
-Register-ScheduledTask -TaskName 'AutoInstall HEVC extension' -User $env:UserName -Password '{password}' -RunLevel Highest -Action $action -Settings $settings -Trigger $trigger
+$password = Read-Host "Enter a Password"
+Register-ScheduledTask -TaskName 'AutoInstall HEVC extension' -User $env:UserName -Password $password -RunLevel Highest -Action $action -Settings $settings -Trigger $trigger
+Remove-Variable password

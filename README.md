@@ -10,5 +10,5 @@ That's why I wrote this script. It installs the working version on every Windows
 
 1. Move appx file to `C:\hevc\`.
 2. Open powershell as administrator privilege.
-3. Replace {password} with your actual password in register_hevc_task.ps1.
-4. Paste codes to the shell.
+3. Paste codes to the shell.
+4. Restart your computer or install appx file manually.
